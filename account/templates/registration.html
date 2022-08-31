@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>New user registration</h3>
+        </div>
+        <div class="col-md-0 col-md-offset-1 text-center">
+            <div class="row">
+                <div class="col-md-0">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Sign in">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

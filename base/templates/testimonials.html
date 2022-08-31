@@ -1,0 +1,32 @@
+<section id="testimonials" class="testimonials">
+      <div class="container position-relative">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            {% for item in testimonials %}
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <img src="{{ item.image.url }}" class="testimonial-img" alt="">
+                    <h3>{{ item.name }}</h3>
+                    <h4>{{ item.job_title }}</h4>
+                    <div class="stars">
+                        {% for i in item.stars|make_list %}
+                            <i class="bi bi-star-fill"></i>
+                        {% endfor %}
+                    </div>
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      {{ item.review }}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+            {% endfor %}
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->

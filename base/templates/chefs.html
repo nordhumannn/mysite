@@ -1,0 +1,44 @@
+<section id="chefs" class="chefs">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Proffesional <span>Chefs</span></h2>
+          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
+
+        <div class="row">
+            {% for chef in chefs %}
+              <div class="col-lg-4 col-md-6">
+                <div class="member">
+                  <div class="pic"><img src="{{ chef.image.url }}" class="img-fluid" alt=""></div>
+                      <div class="member-info">
+                        <h4>{{ chef.name }}</h4>
+                        <span>{{ chef.job_title }}</span>
+                        <div class="social">
+
+                            {% if chef.twitter_link %}
+                                <a href=""><i class="bi bi-twitter"></i></a>
+                            {% endif %}
+
+                            {% if chef.facebook_link %}
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                            {% endif %}
+
+                            {% if chef.insta_link %}
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                            {% endif %}
+
+                            {% if chef.linked_link %}
+                                <a href=""><i class="bi bi-linkedin"></i></a>
+                            {% endif %}
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+
+        </div>
+
+      </div>
+    </section><!-- End Chefs Section -->
